@@ -1,0 +1,27 @@
+.nav-container {
+  transition: all 0.3s ease;
+}
+
+nav {
+  transition: all 0.3s ease;
+}
+
+.bg-gray-800 {
+  background-color: #1f2937; /* Color de fondo cuando se activa el scroll */
+}
+
+.border {
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Forma redondeada */
+}
+
+nav {
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}

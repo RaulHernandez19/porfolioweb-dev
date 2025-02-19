@@ -1,0 +1,49 @@
+<section id="experience" class="section scroll-m-20 w-full mx-auto max-w-4xl mb-20"> <!-- Ajustado max-w-4xl -->
+  <h2 class="flex items-center mb-11 text-2xl sm:text-3xl font-semibold
+  gap-x-3 text-black/80 dark:text-white">
+    <app-icon-work class="size-8"></app-icon-work>
+    Experiencia Laboral
+  </h2>
+
+  <div class="flex flex-col items-center">
+    <!-- Contenedor de la línea de tiempo -->
+    <div class="relative w-full max-w-4xl">
+      <!-- Línea central -->
+      <div class="absolute left-1 sm:left-1/2 w-0.5 h-full bg-gray-300 dark:bg-gray-700 transform -translate-x-1/2"></div>
+
+      <!-- Primer elemento (izquierda) -->
+      <div class="flex justify-start mb-9 relative">
+        <!-- Círculo (absoluto, centrado en la línea) -->
+        <app-timecircle></app-timecircle>
+        <!-- Contenido (izquierda) -->
+        <div class="w-full sm:w-1/2">
+          <app-workbox
+            [workstation]="jobs[0].workstation"
+            [company]="jobs[0].company"
+            [date]="jobs[0].date"
+            [description]="jobs[0].description"
+            [position]="'left'"
+            [tags]="jobs[0].tags"
+          ></app-workbox>
+        </div>
+      </div>
+
+      <!-- Segundo elemento (derecha) -->
+      <div class="flex justify-start sm:justify-end mb-8 relative">
+        <!-- Contenido (derecha) -->
+        <div class="w-full sm:w-1/2 mb-10">
+          <app-workbox
+            [workstation]="jobs[1].workstation"
+            [company]="jobs[1].company"
+            [date]="jobs[1].date"
+            [description]="jobs[1].description"
+            [position]="'right'"
+            [tags]="jobs[1].tags"
+          ></app-workbox>
+        </div>
+        <!-- Círculo (absoluto, centrado en la línea) -->
+        <app-timecircle></app-timecircle>
+      </div>
+    </div>
+  </div>
+</section>

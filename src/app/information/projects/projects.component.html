@@ -1,0 +1,26 @@
+<section id="projects" class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-20 px4">
+  <h2 class="flex items-center mb-11 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white undefined">
+    <app-icon-projects size="30"></app-icon-projects>
+    Proyectos
+  </h2>
+  <!-- For dentro de un nav dependiendo de las etiquetas que haya -->
+  <nav class="flex flex-wrap gap-2 ">
+    @for(skill of skills; track $index) {
+      <app-skillpill class="text-white"
+      [skill]="skill"
+      [selected]="isSkillSelected(skill)"
+      (skillToggled)="toggleFilter($event)"></app-skillpill>
+    }
+  </nav>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 md:grid-cols-2 ">
+    @for(project of filteredProjects; track $index) {
+      <app-cardproject
+      [project]="project"
+></app-cardproject>
+    }
+  </div>
+
+
+
+</section>

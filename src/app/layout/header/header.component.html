@@ -1,0 +1,34 @@
+<div class="nav-container sticky top-4 left-1/2 -translate-x-1/2 z-50 mt-2">
+  <nav class="flex px-3 py-1 text-sm font-medium md:gap-1 text-gray-600 dark:text-white
+    justify-center items-center transition-all duration-300 "
+    [ngClass]="{ 'dark:bg-gray-800 bg-neutral-100  shadow-lg rounded-full px-3 py-1': scrolled }">
+
+    <a *ngFor="let section of sections"
+       class="cursor-pointer px-2 md:px-3 py-1 rounded-lg hover:text-purple-500"
+       [ngClass]="{ 'text-purple-500 font-bold': activeSection === section.id }"
+       (click)="scrollTo(section.id)">
+      {{ section.name }}
+    </a>
+
+    <!-- Botón para cambiar modo oscuro/luz -->
+    <button (click)="toggleDarkMode()" class="p-2 rounded-lg hover:text-purple-500">
+      <svg *ngIf="isDarkMode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v1"></path>
+        <path d="M12 20v1"></path>
+        <path d="M3 12h1"></path>
+        <path d="M20 12h1"></path>
+        <path d="M5.6 5.6l.7.7"></path>
+        <path d="M18.4 18.4l.7.7"></path>
+        <path d="M18.4 5.6l-.7.7"></path>
+        <path d="M5.6 18.4l-.7.7"></path>
+        <path d="M12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"></path>
+      </svg>
+
+      <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+  </nav>
+</div>
