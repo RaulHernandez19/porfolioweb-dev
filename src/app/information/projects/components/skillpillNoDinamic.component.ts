@@ -9,7 +9,7 @@ import { Skilltag } from '../models/skilltag';
   template: `
     <div
       class="flex items-center gap-1 px-2 py-[3px] rounded-full text-[11px]
-      font-medium border border-black/10 text-black dark:font-semibold "
+      font-medium border border-black/10 text-black"
       [ngClass]="skillClasses"
     >
       <ng-container *ngIf="skill.icon">

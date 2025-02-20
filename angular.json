@@ -13,6 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/porfolioweb-dev/",
+            "deployUrl": "/porfolioweb-dev/",
             "outputPath": "dist/porfolioweb-dev",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -46,7 +48,9 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/porfolioweb-dev/",
+            "deployUrl": "/porfolioweb-dev/"
             },
             "development": {
               "optimization": false,
